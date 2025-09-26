@@ -22,4 +22,3 @@ Documentação da APIs - CESUC / 2024-10-21
 * **161a834** -  :<tipo>[escopo opcional]: <descrição>  Horacio - **(horacio.vasconcellos@gmail.com)**
 
 ## [ v01.00.00 ] - 2024-10-19
-

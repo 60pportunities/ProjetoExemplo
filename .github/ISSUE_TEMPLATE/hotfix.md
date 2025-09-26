@@ -24,18 +24,17 @@
 
 ## Logs de falha
 [Inclua todos os trechos de log ou arquivos relevantes aqui.]
- 
+
 # 🛬 Verificações
 [Liste todos os requisitos que devem ser atendidos e as alterações de configuração que devem ser feitas **após** a mesclagem nesta solicitação pull.]
- 
-Eu completei o seguinte: 
- 
-- [ ] Confirmado com outras equipes que o tempo de inatividade foi concluído. 
- 
+
+Eu completei o seguinte:
+
+- [ ] Confirmado com outras equipes que o tempo de inatividade foi concluído.
+
 # 📣 Lista de verificação final
 
 Eu completei o seguinte:
 - [ ] Adicionado comentários apropriados ao meu código onde o código não é facilmente compreendido.
-- [ ] Atualizada a documentação relevante. 
+- [ ] Atualizada a documentação relevante.
 - [ ] Adicionado testes para cobrir as alterações propostas (e se não, explicou o porquê).
-

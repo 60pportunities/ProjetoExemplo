@@ -31,14 +31,14 @@
 ### Sua lista de verificação para esta solicitação pull
 - [ ] O código atende aos critérios de aceite descritos na história de usuário?
 - [ ] O código foi integrado e compila sem erros e sem avisos?
-- [ ] Certifique-se de que você está solicitando **puxar uma ramificação de tópico/recurso/correção de bug** (lado direito). 
+- [ ] Certifique-se de que você está solicitando **puxar uma ramificação de tópico/recurso/correção de bug** (lado direito).
 - [ ] O estilo de mensagem do commit segue o [Conventional Commit](https://www.conventionalcommits.org/pt-br/v1.0.0/).
 - [ ] Verifique se as adições de código não falharão nas verificações **SonarLint** ou **SQL Check**. Se a pontuação do SonarQube for maior para qualquer arquivo modificado, talvez possamos tentar reduzi-la.
 - [ ] Certifique-se de adicionar qualquer nova API à [Catálogo de API](http://devdocs.bbts.com.br)
 - [ ] Os testes (Unidade) estão inclusos e  provam que minha correção é eficaz ou que recurso funciona.
 - [ ] Planilha de Teste de unidade preenchida e atualizada no Repositório Central?
-- [ ] Testes de Validação executados e liberados pelo scrum master?	
-- [ ] Aceitação	Testes de Aceitação executados e validados pelo cliente?	
+- [ ] Testes de Validação executados e liberados pelo scrum master?
+- [ ] Aceitação	Testes de Aceitação executados e validados pelo cliente?
 - [ ] Acrescentado a documentação se necessária (se apropriado).
 - [ ] Quaisquer alterações dependentes foram mescladas e publicadas;
 - [ ] Meu código segue o [estilo de código] deste projeto.
@@ -46,7 +46,7 @@
 
 # Problemas Corrigidos ou Features Desenvolvidas:
 * Resolvidos ..: #nnn
-* Veja também..: #nnn, #nnn 
+* Veja também..: #nnn, #nnn
 
 
 💔Obrigado!

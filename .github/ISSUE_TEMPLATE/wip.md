@@ -29,7 +29,6 @@ Esta é uma solicitação de pull request (Pull Request - PR) em andamento (WIP 
 ## Notas para Revisores
 [Adicione quaisquer notas ou informações adicionais que possam ajudar os revisores durante a revisão.]
 
-## **IMPORTANTE:** 
+## **IMPORTANTE:**
 - [ ] Esta PR ainda está em andamento e não deve ser mesclada até que esteja pronta para revisão.
 - [ ] Não esqueça de atualizar o título desta PR para remover o "WIP" quando estiver pronta para revisão.
-

@@ -1,0 +1,122 @@
+repos:
+    - repo: https://github.com/pre-commit/pre-commit-hooks
+      rev: v6.0.0
+      hooks:
+          - id: check-added-large-files
+            args: ['--maxkb=10000']
+          - id: trailing-whitespace
+          - id: end-of-file-fixer
+          - id: check-yaml
+            files: \.yaml$
+            exclude: ^(mkdocs\.yml|obsidian/workspace\.json)$
+
+    - repo: https://github.com/commitizen-tools/commitizen
+      rev: v4.8.3
+      hooks:
+          - id: commitizen
+            stages: [commit-msg]
+
+    - repo: https://github.com/psf/black
+      rev: 24.8.0
+      hooks:
+          - id: black
+            language_version: python3.12.7
+
+    - repo: https://github.com/PyCQA/isort
+      rev: 6.0.1
+      hooks:
+          - id: isort
+
+    - repo: https://github.com/PyCQA/flake8
+      rev: 7.0.0
+      hooks:
+          - id: flake8
+
+    - repo: local
+      hooks:
+          - id: generate-changelog
+            name: Gera CHANGELOG.md incremental
+            entry: ./scripts/generate_changelog.sh
+            language: script
+            pass_filenames: false
+            always_run: true
+            stages: [post-commit]
+
+    - repo: https://github.com/Yelp/detect-secrets
+      rev: v1.5.0
+      hooks:
+          - id: detect-secrets
+            exclude: ^(obsidian/workspace\.json)$
+            args:
+                - '--baseline'
+                - '.secrets.baseline'
+#                - 'package.lock.json|node_modules/.*'
+#                - '--recursive'
+#                - '--json'
+#                - '.'
+            stages: [pre-commit]  # Executa apenas no estágio de commit
+            always_run: true  # Garante que o hook sempre será executado
+
+
+#    - repo: local
+#      hooks:
+#          - id: osv-scanner
+#            name: OSV Scanner
+#            entry: osv-scanner --recursive --lockfile=requirements.txt
+#            entry: bash -c 'osv-scanner --recursive --format=json . > osv-report.json'
+#            language: system
+##            types: [text]
+#            files: ^(package-lock\.json|requirements\.txt|Pipfile\.lock)$
+#            stages: [pre-commit, pre-push]
+#            always_run: true
+
+#    - repo: https://github.com/google/osv-scanner
+#      rev: v2.1.0  # Certifique-se de usar a versão mais recente
+#      hooks:
+#          - id: osv-scanner
+#            name: OSV Scanner
+#            args:
+#                - '--recursive'  # Escaneia recursivamente os diretórios
+#                - '--format=json'       # Saída no formato JSON (opcional, para integração com outras ferramentas)
+#                - '.'            # Diretório atual como alvo
+#            language: system
+#            files: 'package-lock.json|requirements.txt|Pipfile.lock'
+#            stages: [pre-commit, pre-push]  # Executa no estágio de commit e push
+#            always_run: true        # Garante que o hook sempre será executado
+
+    - repo: https://github.com/markdownlint/markdownlint
+      rev: v0.12.0  # Escolha a versão desejada
+      hooks:
+        - id: markdownlint
+          name: markdownlint
+          entry: markdownlint
+          language: ruby
+          types: [markdown]
+          files: \.(md|mdown|markdown)$
+
+#    - repo: https://github.com/zricethezav/gitleaks
+#      rev: v8.28.0  # use sempre uma versão estável
+#      hooks:
+#        - id: gitleaks
+#          args: ["detect", "--verbose"]
+#
+
+#    - repo: local
+#      hooks:
+#        - id: sonar-scanner
+#          name: Run SonarQube scanner
+#          entry: bash scripts/run-sonar.sh
+#          language: script
+#          pass_filenames: false
+#          stages: [pre-commit]
+#
+
+    - repo: local
+      hooks:
+          - id: generate-changelog
+            name: Generate Conventional Commit CHANGELOG.md
+            language: script
+            entry: ./scripts/generate_changelog.sh
+            pass_filenames: false
+            stages: [pre-push]
+            always_run: true

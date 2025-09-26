@@ -33,5 +33,3 @@ Adicione links para problemas (issues) relacionados a este Pull Request, se houv
 
 ## Notas do Revisor (não preencha)
 Esta seção será preenchida pelo revisor durante a análise do Pull Request.
-
-

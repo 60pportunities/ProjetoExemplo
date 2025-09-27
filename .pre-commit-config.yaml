@@ -65,24 +65,21 @@ repos:
 #            entry: osv-scanner --recursive --lockfile=requirements.txt
 #            entry: bash -c 'osv-scanner --recursive --format=json . > osv-report.json'
 #            language: system
-##            types: [text]
+#            types: [text]
 #            files: ^(package-lock\.json|requirements\.txt|Pipfile\.lock)$
 #            stages: [pre-commit, pre-push]
 #            always_run: true
 
-#    - repo: https://github.com/google/osv-scanner
-#      rev: v2.1.0  # Certifique-se de usar a versão mais recente
-#      hooks:
-#          - id: osv-scanner
-#            name: OSV Scanner
-#            args:
-#                - '--recursive'  # Escaneia recursivamente os diretórios
-#                - '--format=json'       # Saída no formato JSON (opcional, para integração com outras ferramentas)
-#                - '.'            # Diretório atual como alvo
-#            language: system
-#            files: 'package-lock.json|requirements.txt|Pipfile.lock'
-#            stages: [pre-commit, pre-push]  # Executa no estágio de commit e push
-#            always_run: true        # Garante que o hook sempre será executado
+    - repo: https://github.com/google/osv-scanner
+      rev: v2.1.0  # Certifique-se de usar a versão mais recente
+      hooks:
+          - id: osv-scanner
+            name: OSV Scanner
+            entry: bash -c 'osv-scanner --recursive . '
+            language: system
+            files: 'package-lock.json|requirements.txt|Pipfile.lock'
+            stages: [pre-commit, pre-push]  # Executa no estágio de commit e push
+            always_run: true        # Garante que o hook sempre será executado
 
     - repo: https://github.com/markdownlint/markdownlint
       rev: v0.12.0  # Escolha a versão desejada
@@ -109,14 +106,14 @@ repos:
 #          language: script
 #          pass_filenames: false
 #          stages: [pre-commit]
-#
+
 
     - repo: local
       hooks:
-          - id: generate-changelog
-            name: Generate Conventional Commit CHANGELOG.md
-            language: script
-            entry: ./scripts/generate_changelog.sh
-            pass_filenames: false
-            stages: [pre-push]
-            always_run: true
+        - id: generate-changelog
+          name: Generate Conventional Commit CHANGELOG.md
+          language: script
+          entry: ./scripts/generate_changelog.sh
+          pass_filenames: false
+          stages: [pre-push]
+          always_run: true

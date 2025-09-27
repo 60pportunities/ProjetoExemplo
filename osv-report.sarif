@@ -1,0 +1,16 @@
+Scanning dir .
+Scanned /Users/horaciovasconcellos/repositorio/ProjetoExemplo/requirements.txt file and found 555 packages
+Filtered 1 local/unscannable package/s from the scan.
++-------------------------------------+------+-----------+------------+---------+------------------+
+| OSV URL                             | CVSS | ECOSYSTEM | PACKAGE    | VERSION | SOURCE           |
++-------------------------------------+------+-----------+------------+---------+------------------+
+| https://osv.dev/PYSEC-2017-83       |      | PyPI      | scrapy     | 2.13.3  | requirements.txt |
+| https://osv.dev/GHSA-mw26-5g2v-hqw3 | 10.0 | PyPI      | deepdiff   | 7.0.1   | requirements.txt |
+| https://osv.dev/GHSA-847f-9342-265h | 6.9  | PyPI      | h2         | 4.2.0   | requirements.txt |
+| https://osv.dev/PYSEC-2024-60       | 7.5  | PyPI      | idna       | 2.7     | requirements.txt |
+| https://osv.dev/GHSA-jjg7-2v4v-x38h |      |           |            |         |                  |
+| https://osv.dev/GHSA-vvfj-2jqx-52jm | 2.1  | PyPI      | jupyterlab | 4.4.5   | requirements.txt |
+| https://osv.dev/GHSA-3qhf-m339-9g5v | 8.7  | PyPI      | mcp        | 1.8.1   | requirements.txt |
+| https://osv.dev/GHSA-j975-95f5-7wqh | 8.7  | PyPI      | mcp        | 1.8.1   | requirements.txt |
+| https://osv.dev/GHSA-8qvm-5x2c-j2w7 | 8.2  | PyPI      | protobuf   | 5.26.1  | requirements.txt |
++-------------------------------------+------+-----------+------------+---------+------------------+
